@@ -25,8 +25,8 @@
             </table>
         </nav>
         <aside>
-             <table>
-                <tr><td class="sidebar" id="clickables" onclick="show('textbox')">Show useless textbox</td></tr>
+            <table>
+                <tr><td class="sidebar" id="clickables" onclick="toggleDisplay('textbox', 'block')">useless textbox</td></tr>
                 <tr><td class="sidebar" id="textbox" style="display: none"><input id="inputbox"><button onclick="
                 
                 var text = document.getElementById('inputbox').value;
@@ -44,16 +44,14 @@
 
                 }">
 
-                 Submit
-            </button><button onclick="hide('textbox')">Hide</button></td></tr>
+                 Submit</td></tr>
  
-            <tr><td class="sidebar" id="clickables" onclick="show('restextbox')"> Show resizable text box </td></tr>
+            <tr><td class="sidebar" id="clickables" onclick="toggleDisplay('restextbox', 'block')"> resizable text box </td></tr>
             <tr><td class="sidebar" id="restextbox" style="display: none"><textarea id="inputbox"></textarea><button onclick="
                 if (document.getElementById('inputbox').value == pw) {
                     goto('archive.html')
                 }">
-                Submit
-            </button><button onclick="hide('restextbox')">Hide</button></td></tr>
+                Submit</td></tr>
 
 
             </table>
@@ -61,7 +59,7 @@
         </aside>
         <main>
             <div class="article" id="robot">
-                <div class="title"> iframe test <button onclick="goto('https://www.roblox.com/games/130994264717959/Fear-of-Fears')">Click for video</button></div>
+                <div class="title"> iframe test <button onclick="goto('https://www.roblox.com/games/130994264717959/Fear-of-Fears')">Click for game</button></div>
                 <div class="text">for future use</div>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=oapulapY_IbO1Rzd&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 
@@ -69,6 +67,3 @@
         </main>
     </font>
     </body>
-
-    
-

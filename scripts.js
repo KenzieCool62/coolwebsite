@@ -2,12 +2,15 @@ function goto(link) {
       window.location.href=link
 }
 
-function show(id) {
-    document.getElementById(id).style.display='block'
-}
-
-function hide(id) {
-    document.getElementById(id).style.display='none'
+function toggleDisplay(id, prevDisplay) {
+    const element = document.getElementById(id)
+    if (element.style.display == "none") {
+        element.style.display=prevDisplay
+    } else {
+        document.getElementById(id).style.display='none'
+    };
+    
+ 
 }
 
 let clickSound = new Audio('audio/button.mp3');
@@ -37,5 +40,7 @@ window.addEventListener('click', function() {
 window.addEventListener('contextmenu', function() {
   playClickSound("audio/clickfast.ogg")
 }, true);
+
+document.getElementById('banner').onclick(goto("images/banner(1).png"));
 
 const pw = "NULLISLEFTWASHOLMES"

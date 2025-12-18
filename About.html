@@ -25,8 +25,8 @@
             </table>
         </nav>
         <aside>
-            <table>
-                <tr><td class="sidebar" id="clicakbles" onclick="show('textbox')">Show useless textbox</td></tr>
+           <table>
+                <tr><td class="sidebar" id="clickables" onclick="toggleDisplay('textbox', 'block')">useless textbox</td></tr>
                 <tr><td class="sidebar" id="textbox" style="display: none"><input id="inputbox"><button onclick="
                 
                 var text = document.getElementById('inputbox').value;
@@ -44,16 +44,14 @@
 
                 }">
 
-                 Submit
-            </button><button onclick="hide('textbox')">Hide</button></td></tr>
+                 Submit</td></tr>
  
-            <tr><td class="sidebar" id="clicakbles" onclick="show('restextbox')"> Show resizable text box </td></tr>
+            <tr><td class="sidebar" id="clickables" onclick="toggleDisplay('restextbox', 'block')"> resizable text box </td></tr>
             <tr><td class="sidebar" id="restextbox" style="display: none"><textarea id="inputbox"></textarea><button onclick="
                 if (document.getElementById('inputbox').value == pw) {
                     goto('archive.html')
                 }">
-                Submit
-            </button><button onclick="hide('restextbox')">Hide</button></td></tr>
+                Submit</td></tr>
 
 
             </table>
