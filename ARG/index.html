@@ -18,15 +18,15 @@
         <nav>
             <table id="topbar">
                 <tr>
-                    <td class="tbopt" id="clicakbles" onclick="goto('About.html')" style="background-color: #00bbff;">About</td>
-                    <td class="tbopt" id="clicakbles" onclick="goto('index.html')" >Home</td>
-                    <td class="tbopt" id="clicakbles" onclick="goto('Games.html')" >Games</td>
+                    <td class="tbopt" id="clickables" onclick="goto('About.html'), playClickSound()">About</td>
+                    <td class="tbopt" id="clickables" onclick="goto('index.html'), playClickSound()" style="background-color: #00bbff;">Home</td>
+                    <td class="tbopt" id="clickables" onclick="goto('Games.html'), playClickSound()" >Games</td>
                 </tr>
             </table>
         </nav>
         <aside>
             <table>
-                <tr><td class="sidebar" id="clicakbles" onclick="show('textbox')">Show useless textbox</td></tr>
+                <tr><td class="sidebar" id="clickables" onclick="show('textbox')">Show useless textbox</td></tr>
                 <tr><td class="sidebar" id="textbox" style="display: none"><input id="inputbox"><button onclick="
                 
                 var text = document.getElementById('inputbox').value;
@@ -47,7 +47,7 @@
                  Submit
             </button><button onclick="hide('textbox')">Hide</button></td></tr>
  
-            <tr><td class="sidebar" id="clicakbles" onclick="show('restextbox')"> Show resizable text box </td></tr>
+            <tr><td class="sidebar" id="clickables" onclick="show('restextbox')"> Show resizable text box </td></tr>
             <tr><td class="sidebar" id="restextbox" style="display: none"><textarea id="inputbox"></textarea><button onclick="
                 if (document.getElementById('inputbox').value == pw) {
                     goto('archive.html')
@@ -58,11 +58,12 @@
 
             </table>
             
+
         </aside>
         <main>
             <div class="article" id="robot">
-                <div class="title">Biography</div>
-                <div class="text">im a gamedev</div>
+                <div class="title">What is this tab for</div>
+                <div class="text">idk maybe i will put some fun stuffs here, so prob mostly experiments</div>
                 <img class="left" src="images/hmm.webp">
             </div>
         </main>

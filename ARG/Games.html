@@ -18,20 +18,46 @@
         <nav>
             <table id="topbar">
                 <tr>
-                    <td id="tbopt" onclick="goto('About.html')">About</td>
-                    <td id="tbopt" onclick="goto('Index.html')" >Home</td>
-                    <td id="tbopt" onclick="goto('Games.html')" style="background-color: #00bbff;">Games</td>
+                    <td class="tbopt" id="clickables" onclick="goto('About.html')">About</td>
+                    <td class="tbopt" id="clickables" onclick="goto('index.html')" >Home</td>
+                    <td class="tbopt" id="clickables" onclick="goto('Games.html')" style="background-color: #00bbff;">Games</td>
                 </tr>
             </table>
         </nav>
         <aside>
-            <div class="sidebar" onclick="show('textbox')">Show useless textbox</div>
-            <div class="sidebar" id="textbox" style="display: none"><input id="inputbox"><button onclick="
+             <table>
+                <tr><td class="sidebar" id="clickables" onclick="show('textbox')">Show useless textbox</td></tr>
+                <tr><td class="sidebar" id="textbox" style="display: none"><input id="inputbox"><button onclick="
+                
+                var text = document.getElementById('inputbox').value;
+                console.log({text})
+                var val = text.includes('ALL');
+                console.log(text)
+                console.log(val)
+                if (val == true) {
+                    
+                    text = text.replaceAll('ALL', 'NULL');
+                    console.log(text)
+                    if (text == pw) {
+                        goto('archive.html')
+                    }
+
+                }">
+
+                 Submit
+            </button><button onclick="hide('textbox')">Hide</button></td></tr>
+ 
+            <tr><td class="sidebar" id="clickables" onclick="show('restextbox')"> Show resizable text box </td></tr>
+            <tr><td class="sidebar" id="restextbox" style="display: none"><textarea id="inputbox"></textarea><button onclick="
                 if (document.getElementById('inputbox').value == pw) {
                     goto('archive.html')
                 }">
                 Submit
-            </button><button onclick="hide('textbox')">Hide</button></div>
+            </button><button onclick="hide('restextbox')">Hide</button></td></tr>
+
+
+            </table>
+            
         </aside>
         <main>
             <div class="article" id="robot">
